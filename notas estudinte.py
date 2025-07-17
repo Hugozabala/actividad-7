@@ -9,9 +9,10 @@ def menu():
     print("3. buscar estudiante por carnet")
     print("4. salir")
 op=0
-menu()
-op=int(input("ingrese que opcion desea ejecutar"))
 while op!=4:
+    menu()
+    op=int(input("ingrese que opcion desea ejecutar"))
+
 
     if op==1:
         cantidad = int(input("¿Cuántos estudiantes desea ingresar? "))
@@ -35,20 +36,30 @@ while op!=4:
                 "nombre": nombre,
                 "edad": edad,
                 "carrera": carrera,
-                "curso": {
-                    "codigo": curso,
+                "codigo": {
+                    "curso": curso,
                      "notas_tareas": nota,
                      "nota_parcial": nota1,
-                     "nota_notaproyecto":nota2
-
+                     "nota_proyecto":nota2
                 }
-            }
+                }
+                print("estudiante ingresado con éxito")
+                break
     elif op==2:
        print(f"estudiantes ingresados" )
-       for carnet,curso in estudiantes.items():
+       for carnet,datos in estudiantes.items():
            print(f"\n carnet:{carnet}")
-           print(f"\n nombre:{nombre}")
-           print(f"\n edad:{edad}")
+           print(f"\n nombre:{datos['nombre']}")
+           print(f"\n edad:{datos['edad']}")
+           print(f"\n carrera:{datos['carrera']}")
+           for datos,codigo ,date in estudiantes.items():
+               print(f"Correo: {date['codigo']['curso']}")
+               print(f"Correo: {date['codigo']['nota_tareas']}")
+               print(f"Correo: {date['codigo']['nota_parcial']}")
+               print(f"Correo: {date['codigo']['nota_proyecto']}")
+
+               print(f"se mostró todo los datos de estudiante ")
+
 
     elif op==3:
         buscado = input("Ingrese el número de carnet que desea buscar: ")
