@@ -22,16 +22,17 @@ while op!=4:
             nombre = input("Ingrese el nombre completo: ")
             edad = int(input("Ingrese la edad: "))
             carrera = input("Ingrese la carrera: ")
-            correo = input("Ingrese el correo electrónico: ")
-            telefono = input("Ingrese el número de teléfono: ")
+            curso = input("  curso: ")
+            op2 = int(input("Ingrese cuantos cursos desea ingresar : "))
+            for a in range(op2):
 
-            estudiantes[carnet] = {
+               estudiantes[carnet] = {
                 "nombre": nombre,
                 "edad": edad,
                 "carrera": carrera,
-                "contacto": {
-                    "correo": correo,
-                    "telefono": telefono
+                "curso": {
+                    "mate": curso,
+
                 }
             }
     elif op==2:
