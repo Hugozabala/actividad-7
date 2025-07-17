@@ -25,7 +25,7 @@ while op!=4:
             carrera = input("Ingrese la carrera: ")
             op2 = int(input("Ingrese cuantos cursos desea ingresar : "))
             for a in range(op2):
-                curso = input("  curso: ")
+                curso = input("  ingrese código curso: ")
                 nota =int(input(" ingreso nota de tareas: "))
                 nota1 = int(input(" ingreso nota de parcial: "))
                 nota2 = int(input(" ingreso nota de proyecto: "))
@@ -44,7 +44,7 @@ while op!=4:
                 }
                 }
                 print("estudiante ingresado con éxito")
-                break
+
     elif op==2:
        print(f"estudiantes ingresados" )
        for carnet,datos in estudiantes.items():
@@ -58,7 +58,8 @@ while op!=4:
                print(f"Correo: {date['codigo']['nota_parcial']}")
                print(f"Correo: {date['codigo']['nota_proyecto']}")
 
-               print(f"se mostró todo los datos de estudiante ")
+           print("se mostró todo los datos de estudiante ")
+
 
 
     elif op==3:
