@@ -12,7 +12,7 @@ op=0
 menu()
 op=int(input("ingrese que opcion desea ejecutar"))
 while op!=4:
-    op=int(input("ingrese que opcion desea ejecutar"))
+
     if op==1:
         cantidad = int(input("¿Cuántos estudiantes desea ingresar? "))
 
@@ -45,6 +45,11 @@ while op!=4:
             }
     elif op==2:
        print(f"estudiantes ingresados" )
+       for carnet,curso in estudiantes.items():
+           print(f"\n carnet:{carnet}")
+           print(f"\n nombre:{nombre}")
+           print(f"\n edad:{edad}")
+
     elif op==3:
         buscado = input("Ingrese el número de carnet que desea buscar: ")
 
@@ -54,8 +59,7 @@ while op!=4:
             print(f"Nombre: {estudiante['nombre']}")
             print(f"Edad: {estudiante['edad']}")
             print(f"Carrera: {estudiante['carrera']}")
-            print(f"Correo: {estudiante['contacto']['correo']}")
-            print(f"Teléfono: {estudiante['contacto']['telefono']}")
+
         else:
             print("Estudiante no encontrado.")
 
